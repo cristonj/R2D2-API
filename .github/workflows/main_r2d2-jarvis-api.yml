@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - R2D2-Jarvis-API
+name: Build and deploy Python app to Azure Web App - r2d2-jarvis-api
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B00BA6E551E846CDBB994BFCB96877BA }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B45750D0232748929FFDEAE4A76C7A31 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C8A326ECCF8147318F1552AB10DAC234 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_85555637906F4C3CACB51F009A089BAD }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_81D19D6EFB8D44AF8E7597690FDF751D }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_79D4E55870FC440687889EF1D7693B45 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'R2D2-Jarvis-API'
+          app-name: 'r2d2-jarvis-api'
           slot-name: 'Production'
           
